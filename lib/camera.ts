@@ -28,8 +28,9 @@ export function hallPose(aspect: number): CameraPose {
 export function panelPose(aspect: number): CameraPose {
   const portrait = aspect <= 1;
   const squat = portrait && aspect > 0.6;
-  const position: Point = portrait ? [-1.52, 1.38, squat ? -1.42 : -1.3] : [-0.86, 1.5, -1.62];
-  const target: Point = portrait ? [-1.66, 1.33, -0.24] : [-1.27, 1.36, -0.24];
+  // Portrait screens stand far enough back that all thirteen buttons fit between the copy and SURPRISE ME.
+  const position: Point = portrait ? [-1.6, 1.4, squat ? -1.82 : -2.02] : [-0.86, 1.5, -1.62];
+  const target: Point = portrait ? [-1.65, 1.31, -0.24] : [-1.27, 1.36, -0.24];
   return { position, ...aimAt(position, target), roll: 0, fov: portrait ? 56 : 50 };
 }
 /** Standing in the middle of the car, facing the doors and the lintel indicator. */
