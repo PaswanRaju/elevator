@@ -1,4 +1,2 @@
-import Elevator from "@/components/Elevator";
-export default function Page() {
-  return <Elevator />;
-}
+import CinematicExperience from '@/components/CinematicExperience';
+export default function Page(){return <CinematicExperience/>}

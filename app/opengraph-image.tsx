@@ -1,35 +1,5 @@
-import { ImageResponse } from "next/og";
-export const alt = "THE ELEVATOR — Some doors lead somewhere else.";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
-export default function Image() {
-  return new ImageResponse(
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        background: "linear-gradient(115deg, #080d14, #272b2c)",
-        color: "#e6dfcc",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        border: "1px solid #4c493f",
-      }}
-    >
-      <div style={{ fontSize: 18, letterSpacing: 10, color: "#b5a273" }}>
-        AN EXPERIENCE ABOVE THE ORDINARY
-      </div>
-      <div style={{ fontSize: 108, letterSpacing: -5, marginTop: 25 }}>
-        THE ELEVATOR
-      </div>
-      <div style={{ fontSize: 23, marginTop: 30, color: "#aaa99c" }}>
-        Some doors lead somewhere else.
-      </div>
-      <div style={{ fontSize: 25, color: "#c4ac74", marginTop: 50 }}>
-        XIII &nbsp; / &nbsp; STEP INSIDE
-      </div>
-    </div>,
-    { width: 1200, height: 630 },
-  );
-}
+import {ImageResponse} from 'next/og';
+export const alt='THE ELEVATOR — Some doors change everything.';
+export const size={width:1200,height:630};
+export const contentType='image/png';
+export default function Image(){return new ImageResponse(<div style={{display:'flex',width:'100%',height:'100%',position:'relative',background:'linear-gradient(120deg,#081018,#203235)',color:'#e5e2d6',padding:75,flexDirection:'column',justifyContent:'center'}}><div style={{fontSize:15,letterSpacing:5,color:'#bcae8a',marginBottom:35}}>THE ELEVATOR / AN 18-SECOND ESCAPE</div><div style={{fontSize:75,lineHeight:1.1,letterSpacing:-3}}>Some doors</div><div style={{fontSize:75,lineHeight:1.1,letterSpacing:-3,color:'#bdc5b5'}}>change everything.</div><div style={{display:'flex',position:'absolute',right:90,top:85,width:200,height:460,border:'8px solid #727567',background:'linear-gradient(90deg,#26362f,#788778 49%,#18251f 50%,#657769 51%,#26362f)',boxShadow:'0 0 60px #c6b88a20'}}/><div style={{fontSize:13,letterSpacing:3,marginTop:55,color:'#92a398'}}>STEP INSIDE. GO SOMEWHERE ELSE. ↗</div></div>,size)}
